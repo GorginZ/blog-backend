@@ -1,13 +1,14 @@
 class PostsController < ApplicationController
     def index
-        @posts = Post.all
+        posts = Post.all
+        render json: posts
     end
     
 
-    def show
-        @post = Post.find(params[:id])
-    end
+    # def show
+    #     @post = Post.find(params[:id])
+    # end
 
-    def new
-    end
+    # def new
+    # end
 end
